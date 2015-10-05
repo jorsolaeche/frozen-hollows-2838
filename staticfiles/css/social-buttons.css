@@ -1,0 +1,166 @@
+a.sb,
+.sb a {
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-indent: -900em;
+	color: #fff;
+	text-decoration: none;
+	line-height: 100%;
+	white-space: nowrap;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	margin: 0 2px 5px 0;
+
+	/* default box shadow */
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
+
+	/* default border radius */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+}
+/* for IE */
+*:first-child+html a.sb,
+*:first-child+html .sb a {
+	text-indent: 0;
+	line-height: 0;
+	font-size: 0;
+	overflow: hidden;
+}
+
+
+/* SB LIST
+================================================ */
+.sb {
+	margin: 0;
+	padding: 0;
+}
+.sb li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+
+/* SIZES
+================================================ */
+/* small */
+a.sb.small,
+.sb.small a {
+	width: 26px;
+	height: 26px;
+	font-size: 90%;
+}
+
+/* large */
+a.sb.large,
+.sb.large a {
+	width: 40px;
+	height: 40px;
+	font-size: 120%;
+}
+
+/* icon with text style */
+a.sb.text,
+.sb.text a {
+	text-indent: 0;
+	width: auto;
+	height: 30px;
+	padding: 9px 14px 3px 34px;
+	background-position: 2px center;
+}
+*:first-child+html a.sb.text,
+*:first-child+html .sb.text a {
+	text-indent: inherit; /* for IE */
+	line-height: 100%;
+	font-size: 100%;
+}
+
+a.sb.small.text,
+.sb.small.text a {
+	background-position: 2px center;
+	padding: 6px 12px 0 34px;
+}
+a.sb.large.text,
+.sb.large.text a {
+	background-position: 6px center;
+	padding: 12px 20px 8px 40px;
+}
+
+/* flat style */
+a.sb.flat,
+.sb.flat a,
+a.sb.flat:before,
+.sb.flat a:before {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+/* ICONS
+================================================ */
+a.sb.twitter,
+.sb a.twitter {
+	background-image: url(../images/twitter_bird.png);
+}
+
+a.sb.facebook,
+.sb a.facebook {
+	background-image: url(../images/facebook.png);
+}
+/* white icons */
+a.sb.blue.twitter,
+.sb.blue a.twitter,
+a.sb.purple.twitter,
+.sb.purple a.twitter,
+a.sb.red.twitter,
+.sb.red a.twitter,
+a.sb.green.twitter,
+.sb.green a.twitter,
+a.sb.orange.twitter,
+.sb.orange a.twitter,
+a.sb.brown.twitter,
+.sb.brown a.twitter,
+a.sb.black.twitter,
+.sb.black a.twitter,
+a.sb.gray.twitter,
+.sb.gray a.twitter {
+	background-image: url(images/white_twitter_bird.png);
+}
+
+a.sb.blue.facebook,
+.sb.blue a.facebook,
+a.sb.purple.facebook,
+.sb.purple a.facebook,
+a.sb.red.facebook,
+.sb.red a.facebook,
+a.sb.green.facebook,
+.sb.green a.facebook,
+a.sb.orange.facebook,
+.sb.orange a.facebook,
+a.sb.brown.facebook,
+.sb.brown a.facebook,
+a.sb.black.facebook,
+.sb.black a.facebook,
+a.sb.gray.facebook,
+.sb.gray a.facebook {
+	background-image: url(images/white_facebook.png);
+}
+.tw
+{
+	background: #55ACEE;
+}
+.fb
+{
+	background: #45619D;
+}

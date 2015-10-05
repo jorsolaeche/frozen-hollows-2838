@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ empresa.razonsocial }} {% endblock %}
+
+{% block scripts %}
+
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+var myCenter=new google.maps.LatLng({{ empresa.latitud }},{{ empresa.longitud }});
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:17,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col s12 m6 l6">
+        <h3 class="center">{{ empresa.razonsocial }}</h3>
+          <div class="center">
+            {% if empresa.logo %}
+              <img class="responsive-img" src="{{ empresa.logo.url }}" alt="{{ empresa.razonsocial }}">
+              <p class="center-align">Rubro <strong>{{ empresa.rubro }}</strong></p>
+            {% else %}
+              <p class="center"> No posee imagen</p>
+              <p class="center-align">Rubro <strong>{{ empresa.rubro }}</strong></p>
+            {% endif %}
+          </div>
+      </div>
+      <div class="col s12 m6 l6">
+        <h3 class="center">Nuestra Direccion</h3>
+          <ul>
+            <li><strong>Direccion: </strong>{{ empresa.direccion }}</li>
+            <li><strong>Telefono: </strong>{{ empresa.telefono }}</li>
+          </ul>
+        <div id="googleMap" style="width:100%;height:380px;"></div>
+      </div>
+  </div>
+</div>
+<br><br>
+{% endblock %}

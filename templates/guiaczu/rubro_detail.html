@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+    {{ rubro.nombre }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col s12 m12 l12">
+         <h3 class="center">Empresas en el rubro de {{ rubro.nombre }}</h3>
+        {% for empresa in empresas %}
+        <div class="col s12 m6 l6">
+          <ul class="collection">
+            <li class="collection-item avatar">
+              {% if empresa.logo %}
+                <img src="{{ empresa.logo.url }}" alt="" class="circle">
+              {% else %}
+
+              {% endif %}
+              <a href="{% url 'comercial:empresa_detail' empresa.slug %}"><span class="title">{{ empresa.razonsocial }}</span></a>
+              <p>{{ empresa.direccion }} <br>
+                 {{ empresa.telefono }}
+              </p>
+            </li>
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+</div>
+<br><br>
+{% endblock %}
