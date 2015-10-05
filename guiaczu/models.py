@@ -16,7 +16,7 @@ class Rubro(models.Model):
 	slug = models.SlugField(editable=False)
 
 	def save(self, *args, **kwargs):
-		if not self.id_rubro:
+		if not self.id:
 			self.slug = slugify(self.nombre)
 		super(Rubro, self).save(*args, **kwargs)
 
