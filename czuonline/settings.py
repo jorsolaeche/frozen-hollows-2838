@@ -1,5 +1,6 @@
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
+import os
 DATABASES = {}
 DATABASES['default'] =  dj_database_url.config()
  
@@ -13,7 +14,6 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 ########
-import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
