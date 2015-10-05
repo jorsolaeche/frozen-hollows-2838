@@ -1,1 +1,1 @@
-web: gunicorn caaguazuonline.wsgi
+web: gunicorn czuonline.wsgi
