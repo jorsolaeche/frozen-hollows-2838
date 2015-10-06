@@ -14,4 +14,4 @@ class EmpresaSerializer(serializers.HyperlinkedModelSerializer):
 	rubro = RubroSerializer()
 	class Meta:
 		model = Empresa
-		fields = ('id_empresa','logo', 'razonsocial', 'slug', 'direccion', 'latitud', 'longitud', 'telefono','rubro')
+		fields = ('id_empresa','logo', 'razonsocial', 'slug', 'direccion', 'latitud', 'longitud', 'telefono','rubro','facebook_id')
