@@ -19,4 +19,5 @@ urlpatterns = [
 	# Empresa
 	url(r'^empresa/(?P<slug>[-\w]+)/$' , EmpresaDetailView.as_view(), name = 'empresa_detail'),
 	url(r'^api/', include(router.urls)),
+	
 ]
