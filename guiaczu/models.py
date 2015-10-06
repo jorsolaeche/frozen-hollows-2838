@@ -35,6 +35,7 @@ class Empresa(TimeStampModel):
 	direccion = models.CharField(max_length = 140, help_text='Direccion de la empresa')
 	latitud = models.CharField(max_length = 50,  null=True, blank=True, help_text='Latitud para la direccion en google maps')
 	longitud = models.CharField(max_length = 50,  null=True, blank=True, help_text='Longitud para la direccion en google maps')
+	facebook_id = models.CharField(max_length = 50,  null=True, blank=True, help_text='id de pagina de facebook')
 	rubro = models.ForeignKey(Rubro,db_column='id_rubro')
 
 	user = models.ForeignKey(User)
