@@ -11,4 +11,7 @@ urlpatterns = [
     #Admin
     url(r'^admin/', include(admin.site.urls)),
 ]
+urlpatterns += patterns('',
+ (r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+ )
 
