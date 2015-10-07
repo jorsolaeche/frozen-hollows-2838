@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.conf.urls import patterns, include, url
 from django.views.decorators.cache import cache_page
+from django.conf import settings
 
 from rest_framework import routers
 
