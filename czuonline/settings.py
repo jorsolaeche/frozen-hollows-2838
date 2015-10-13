@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'czuonline.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
+#""
 
 
 # Internationalization
@@ -103,7 +103,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'staticfiles'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, '')
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 
 REST_FRAMEWORK = {
